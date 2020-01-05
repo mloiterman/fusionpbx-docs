@@ -4,6 +4,52 @@ Version Upgrade
 
 Version Upgrade can take several steps to perform. Below will show how to upgrade from specific versions.
 
+4.4 to Master (what will become 4.6)
+^^^^^^^^^^^^^^^^^^
+
+1. Switch branches
+
+::
+
+ mv /var/www/fusionpbx /var/www/fusionpbx-4.4
+ cd /var/www && git clone https://github.com/fusionpbx/fusionpbx.git
+ chown -R www-data:www-data /var/www/fusionpbx
+
+2. Try Advanced -> Upgrade Schema if that fails use the the command line.
+
+::
+
+ cd /var/www/fusionpbx
+ php /var/www/fusionpbx/core/upgrade/upgrade.php
+
+3. Refresh the browser if there are issues then logout and then back in.
+
+4. Update the following Dialplans.
+
+If you have made any changes to these make notes on the changes before you delete them. So that the changes could be added back. For example valet park could have custom music on hold or a custom timeout for the valet park.
+
+::
+
+ user_exists
+ is_loopback
+ is_local
+ user_record
+ agent_status
+ group_intercept
+ extension-to-voicemail
+ vmain
+ vmain_user
+ tone_stream
+ recordings
+ valet_park
+ call_screen
+ call_forward_not_registered
+ local_extension
+ voicemail
+
+- Update these Dialplans by first selecting and deleting their entries from within the Dialplan Manager for all domains. Then, run Advanced -> Upgrade -> App Defaults to retrieve the new versions of the diaplans.
+
+5. If you have customized any provisioning templates makes sure to copy them from /var/www/fusionpbx-4.4/resources/templates/provision and copy them into the right vendor directory in /var/www/fusionpbx/resources/templates/provision. I you haven't customized the provisioning templates you can skip this step.
 
 
 Version 4.2 to 4.4

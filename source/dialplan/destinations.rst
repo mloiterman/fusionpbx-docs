@@ -7,6 +7,12 @@ Destinations
 
 Inbound destinations are the DID/DDI, DNIS or Alias for inbound calls. `Click here for the youtube video`_
 
+.. raw:: html
+
+    <div style="text-align: center; margin-bottom: 2em;">
+    <iframe width="100%" height="350" src="https://www.youtube.com/embed/8-EJM0hd-J8?rel=0" frameborder="0" ; encrypted-media" allowfullscreen></iframe>
+    </div>
+
 Configure Inbound Destinations: (This will auto-configure an Inbound Route also)
 
 .. Tip::
@@ -30,6 +36,8 @@ To add a destination **click** on the **plus** button on the right.
 * **Destination:** This is usually the DID a caller will call.
 * **Context:**  This will usually be public.
 * **Actions:** Choose where the call will go after it enters FusionPBX.
+        * Dialplans can also be used as an action. To enable a dialplan to be visable go to `Dialplan > Dialplan Manager <../dialplan/advanced_dialplans.html#enable-a-dialplan-destination>`_ and edit a dialplan.  Select **True** from the **Destination** field and click save.  This applies to dialplans that have a value in the **Number** field.
+
 * **Caller ID Name Prefix:** Adds a name to the Caller ID that will display to the endpoint and call detail records.
 * **Record:** Record all calls made to the destination.
 * **Account Code:** Used in some billing systems.

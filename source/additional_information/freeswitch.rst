@@ -395,6 +395,23 @@ Add the following to the file and save it.
   stop  program = "/etc/init.d/fail2ban stop"
   if 5 restarts within 5 cycles then timeout
 
+SIP
+~~~~~
+
+To monitor SIP from local or remote server
+
+::
+
+ cd /etc/monit.d
+ touch sip
+ nano sip
+
+::
+
+ check host fusionpbx with address your-ip
+     if failed port 5060 protocol sip with target monit@monit:5060
+         then alert
+         
 FreeSWITCH
 ~~~~~~~~~~~~
 
@@ -414,18 +431,20 @@ or
 Add the following
 
 ::
-
- check process freeswitch with pidfile /usr/local/freeswitch/run/freeswitch.pid
+ #check process freeswitch with pidfile /usr/local/freeswitch/run/freeswitch.pid
+ check process freeswitch with pidfile /run/freeswitch/freeswitch.pid
  start program = "/usr/bin/service freeswitch start"
  stop program  = "/usr/bin/service freeswitch stop"
 
 or
 
 ::
-
- check process freeswitch with pidfile /usr/local/freeswitch/run/freeswitch.pid
- start program = "/usr/local/freeswitch/bin/./freeswitch -nc -u www-data"
- stop program  = "/usr/local/freeswitch/bin/./freeswitch -stop"
+ #check process freeswitch with pidfile /usr/local/freeswitch/run/freeswitch.pid
+ #start program = "/usr/local/freeswitch/bin/./freeswitch -nc -u www-data"
+ #stop program  = "/usr/local/freeswitch/bin/./freeswitch -stop"
+ check process freeswitch with pidfile /run/freeswitch/freeswitch.pid
+ start program = "/usr/bin/./freeswitch -nc -u www-data"
+ stop program  = "/usr/bin/./freeswitch -stop"
 
 
 Additional Options

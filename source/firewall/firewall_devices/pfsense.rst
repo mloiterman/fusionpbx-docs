@@ -3,9 +3,34 @@ pfSense
 ##########
 
 
+**Static Port**
+----------------------------------------
+
+Menu -> NAT -> Advanced Outbound NAT (enabled)
+
+set static port to yes
+
+.. image:: ../../_static/images/firewall/fusionpbx_pfsense_firewall_outbound.jpg
+        :scale: 85%
 
 
-1.  **Create Alias Ports in pfSense**
+
+
+
+**Firewall Optimization - Conservative**
+----------------------------------------
+
+System -> Advanced -> Firewall NAT -> Firewall Optimization
+
+select Conservative
+
+
+.. image:: ../../_static/images/firewall/fusionpbx_pfsense_firewall_and_nat.jpg
+        :scale: 85%
+
+
+
+**Create Alias Ports in pfSense**
 ----------------------------------------
 
 .. image:: ../../_static/images/firewall/fusionpbx_pfsense.png
@@ -36,7 +61,7 @@ pfSense
 
 * After you are finished Click SAVE.
 
-2. **Configure pfSense Port Forwarding**
+**Configure pfSense Port Forwarding**
 -----------------------------------------
 
 .. image:: ../../_static/images/firewall/fusionpbx_pfsense2.png
@@ -68,7 +93,7 @@ pfSense
 
 * Click SAVE when done.
 
-3. **Configure FusionPBX**
+**Configure FusionPBX**
 -----------------------------
 
 * In FusionPBX
@@ -100,3 +125,9 @@ Edit the Internal Profile and add
 
 **Status >> SIP Status**
 Stop and Start the internal profile for the changes to take effect.
+
+
+.. note::
+
+   More information can be found at https://www.netgate.com/docs/pfsense/nat/configuring-nat-for-voip-phones.html
+

@@ -2,12 +2,12 @@
 Cache
 ###########
 
-Option to use file cache for xml and not memcache.
+Option to use file or memcache cache for the xml.
 
 +-----------------------------+----------------------+-----------------------+-------------------------+---------------------------------+
 | Default Setting Subcategory | Default Setting Name | Default Setting Value | Default Setting Enabled | Default Setting Description     |
 +=============================+======================+=======================+=========================+=================================+
-| method                      | text                 | memcache              | TRUE                    | Cache methods file or memcache. |
+| method                      | text                 | file                  | TRUE                    | Cache methods file or memcache. |
 +-----------------------------+----------------------+-----------------------+-------------------------+---------------------------------+
 | location                    | text                 | /tmp                  | TRUE                    | Location for the file cache.    |
 +-----------------------------+----------------------+-----------------------+-------------------------+---------------------------------+

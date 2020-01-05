@@ -24,6 +24,13 @@ lines or high density T1/E1 circuits, and many other features. FusionPBX
 provides the functionality that business need and provides corporate
 level phone system features to small, medium and large businesses. `Click here for the FusionPBX youtube channel`_ .
 
+.. raw:: html
+
+    <div style="text-align: center; margin-bottom: 2em;">
+    <iframe width="100%" height="350" src="https://www.youtube.com/embed/YmIht8hEHYU?rel=0" frameborder="0" ; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+
 Benefits of FusionPBX
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -45,6 +52,8 @@ Benefits of FusionPBX
 +-------------------------+-----------------------+---------------------------------+------------------------------------------+
 | `Multi-Tenant`_         | `Music on Hold`_      |    `Queues`_                    |      `Recordings`_                       |
 +-------------------------+-----------------------+---------------------------------+------------------------------------------+
+| `Device Provisioning`_  | `Streams`_            |   `QR Code Provisioning`_       | `SMS/MMS ready`_                         |                                                                        
++-------------------------+-----------------------+---------------------------------+------------------------------------------+
 | `Time Conditions`_      | `WebRTC ready`_       |    `Voicemail`_                 |      `and lots more...`_                 |
 +-------------------------+-----------------------+---------------------------------+------------------------------------------+
 
@@ -55,9 +64,12 @@ We are a **global community** that has an open and **very friendly** ecosystem. 
 
 Most of the core folks who develop and use FusionPBX can be found hanging out in Freenode IRC in the **#fusionpbx** channel. Come join us and meet the team.
 
-
-.. _FreeSWITCH: http://www.freeswitch.org
-.. _FusionPBX: http://www.fusionpbx.com
+.. _Device Provisioning: applications/provision.html
+.. _Streams: applications/streams.html
+.. _QR Code Provisioning: applications/gs_wave.html
+.. _SMS/MMS ready: applications/sms_mms.html
+.. _FreeSWITCH: https://www.freeswitch.org
+.. _FusionPBX: https://www.fusionpbx.com
 .. _Click here for the FusionPBX youtube channel: https://www.youtube.com/playlist?list=PLrhVQpI_CtOwQNB_lsNIxrl9SOAuo9ZSF
 .. _IVR Menus: applications/ivr.html
 .. _Call Broadcast: applications/call_broadcast.html
@@ -145,6 +157,22 @@ Advanced
    :maxdepth: 4
 
    advanced.rst
+
+Hardware
+=============
+
+.. toctree::
+   :maxdepth: 4
+
+   hardware.rst
+
+Software
+===========
+
+.. toctree::
+   :maxdepth: 4
+   
+   software.rst
 
 Additional Information
 =======================

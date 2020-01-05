@@ -21,4 +21,6 @@ Firewall
   firewall/iptables.rst
   firewall/fail2ban.rst
   firewall/pf.rst
-  firewall/firewall_devices.rst
+ 
+ 
+
